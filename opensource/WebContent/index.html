@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>부트스트랩 </title>
+	<!-- Bootstrap -->
+	<link href="./css/nomalize.css" rel="stylesheet">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<form action="action.jsp" class="form-horizontal" role="form">
+			<fieldset>
+				<legend>기본정보 </legend>
+				
+				<div class="form-group">
+					<label for="address" class="col-xs-2 col-lg-2 control-label">
+						<span class="glyphicon glyphicon-user"> </span>이름</label>
+					<div class="col-xs-10 col-lg-10">
+						<input type="text" name="name" class="form-control" placeholder="이름">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="address" class="col-xs-2 col-lg-2 control-label">
+						<span class="glyphicon glyphicon-lock"> </span>암호</label>
+					<div class="col-xs-10 col-lg-10">
+						<input type="text" name="pw" class="form-control" placeholder="암호">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="address" class="col-xs-2 col-lg-2 control-label">
+						<span class="glyphicon glyphicon-lock"> </span>성별</label>
+					<div class="col-xs-10 col-lg-10">
+						<input type="radio" name="sex" id="sex" value="male" checked> 남성
+						<input type="radio" name="sex" id="sex" value="female" checked> 여성
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="address" class="col-xs-2 col-lg-2 control-label">
+						<span class="glyphicon glyphicon-lock"> </span>연령대</label>
+					<div class="col-xs-10 col-lg-10">
+						<input type="radio" name="years" id="years" value="10" checked> 10~20:대
+						<input type="radio" name="years" id="years" value="20" checked> 20~30:대
+						<input type="radio" name="years" id="years" value="30" checked> 30~40:대
+						<input type="radio" name="years" id="years" value="40" checked> 40~50:대
+					</div>
+				</div>
+
+				<div class="form-group ">
+					<label for="address" class="col-xs-2 col-lg-2 control-label">
+						<span class="glyphicon glyphicon-lock"> </span>체형</label>
+					<div class="col-xs-10 col-lg-10">
+						<input type="radio" name="optionsRadios" id="optionsRadios1" value="body1" checked> 체형1
+						<input type="radio" name="optionsRadios" id="optionsRadios1" value="body2" checked> 체형2
+						<input type="radio" name="optionsRadios" id="optionsRadios1" value="body3" checked> 체형3
+						<input type="radio" name="optionsRadios" id="optionsRadios1" value="body4" checked> 체형4
+					</div>
+				</div>
+
+			</fieldset>
+			<fieldset disabled>
+				<legend>부가정보(임시) 임시로 넣은것... </legend>
+				<div class="form-group">
+					<label for="address" class="col-xs-2 col-lg-2 control-label">
+						<span class="glyphicon glyphicon-lock"> </span>주소</label>
+					<div class="col-xs-10 col-lg-10">
+						<input type="text" class="form-control" placeholder="주소">
+					</div>
+				</div>
+			</fieldset>
+
+			<input type="submit" class="btn btn-primary col-xs-12 col-lg-12" value="입력 완료 ">
+			<input type="reset" class="btn btn-warning col-xs-12 col-lg-12" value="초기화 ">
+
+		</form>
+	</div>
+
+</body>
+
+</html>

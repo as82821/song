@@ -1,0 +1,167 @@
+﻿<!doctype html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waypoint Sample</title>
+
+<!-- Bootstrap -->
+<link href="./css/nomalize.css" rel="stylesheet">
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+<style>
+@import
+	url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+
+body {
+	background-color: #fff;
+}
+
+.content1 {
+	background: url(./imgs/1.jpg) no-repeat center top fixed;
+	background-size: cover;
+}
+
+.content2 {
+	background: url(./imgs/2.jpg) no-repeat center bottom fixed;
+	background-size: cover;
+}
+
+.content3 {
+	background: url(./imgs/3.jpg) no-repeat center bottom fixed;
+	background-size: cover;
+}
+
+.content4 {
+	background: url(./imgs/4.jpg) no-repeat center bottom fixed;
+	background-size: cover;
+}
+
+.content5 {
+	background: url(./imgs/5.jpg) no-repeat center bottom fixed;
+	background-size: cover;
+}
+
+.content6 {
+	background: url(./imgs/6.jpg) no-repeat center bottom fixed;
+	background-size: cover;
+}
+
+.content1, .content2, .content3, .content4, .content5, .content6 {
+	height: 1100px;
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 1);
+	padding: 0 100px;
+}
+
+h1 {
+	font-size: 75px;
+	padding-top: 250px;
+	font-weight: 300;
+}
+
+h4 {
+	font-weight: 300;
+	font-size: 15px;
+}
+
+p {
+	color: #fff
+}
+</style>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div class="container">
+		<div class="content1">
+			<h1>
+				<strong>날씨에 따른</strong><br />차세대 패션 웹사이트
+			</h1>
+			<p>스크롤을 내려면 시작합니다.</p>
+		</div>
+		<div class="content2">
+			<h1>
+				오늘은 무슨 옷을 입일까? <br /> <strong>고민을</strong><br /> 한적이 있나요?
+			</h1>
+
+		</div>
+		<div class="content3">
+			<h1>
+				<strong>날씨를</strong> 고려하랴...<br />
+				<strong>온도를</strong> 고려하랴....
+			</h1>
+
+		</div>
+		<div class="content4">
+			<h1>
+				걱정이<br /> 이만저만이 아닐겁니다..
+			</h1>
+
+		</div>
+		<div class="content5">
+			<h1>
+				그래서 준비했습니다.<br /> <strong>21세대 차세대 패션</strong><br /> 웹사이트
+			</h1>
+		</div>
+		<div class="content6">
+			<h1>
+				자! <br />
+				<strong>지금</strong><br />시작합니다.
+			</h1>
+		</div>
+		<div class="end"></div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-body">홈페이지로 이동합니다.!</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/waypoints.min.js"></script>
+	<script src="./js/simpleparallax.js"></script>
+	<script>
+		$('.content1').parallax({
+			speed : 4
+		});
+		$('.end').waypoint(function(direction) {
+			if (direction === 'down') {
+				$('#myModal').modal('show')
+				$('#myModal').on('hidden.bs.modal', function(e) {
+					location.href = 'login.jsp';
+				});
+			}
+
+		}, {
+			offset : '100%'
+		}).waypoint(function(direction) {
+			if (direction === 'up') {
+				$('#myModal').modal('hide')
+			}
+		});
+	</script>
+
+</body>
+</html>
